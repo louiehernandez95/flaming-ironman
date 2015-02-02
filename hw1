@@ -1,0 +1,73 @@
+using System;
+
+namespace grade_calc.cs
+{
+	class MainClass
+	{
+		public static void Main (string[] args)
+		{
+			double ExamsWeight, LabsWeight, HomeworkWeight, ProjectWeight, ParticipationWeight;
+			double ExamsGrade, LabsGrade, HomeworkGrade, ProjectGrade, ParticipationGrade;
+			string ExamsWeightString, LabsWeightString, HomeworkWeightString, ProjectWeightString, ParticipationWeightString;
+			string ExamsGradeString, LabsGradeString, HomeworkGradeString, ProjectGradeString, ParticipationGradeString;
+
+						
+
+			Console.WriteLine ("This Calculator will help you determine a grade in a given class. Remember to have the weights add to 100%");
+			Console.WriteLine ( "Enter Exams Weight: ");
+				ExamsString = Console.ReadLine();
+				ExamsWeight = double.Parse(ExamsString);
+			Console.WriteLine ( "Enter Labs Weight: ");
+				LabsString = Console.ReadLine();
+				LabsWeight = double.Parse(LabsString);
+			Console.WriteLine ( "Enter Homework Weight: ");
+				HomeworkString = Console.ReadLine();
+				HomeworkWeight = double.Parse(LabsString);
+			Console.WriteLine ( "Enter Projects Weight: ");
+				ProjectString = Console.ReadLine();
+				ProjectWeight = double.Parse(ProjectsString);
+			Console.WriteLine ( "Enter Participation Weight: ");
+				ParticipationString = Console.ReadLine();
+				ParticipationWeight = double.Parse(ParticipationString);
+
+			Console.WriteLine ( "Enter Exams Grade: ");
+				ExamsGradeString = Console.ReadLine();
+				ExamsGrade = double.Parse(ExamsGradeString);
+			Console.WriteLine ( "Enter Labs Grade: ");
+				LabsGradeString = Console.ReadLine();
+				HomeworkGrade = double.Parse(LabsGradeString);
+			Console.WriteLine ( "Enter Homework Grade: ");
+				HomeworkGradeString = Console.ReadLine();
+				LabsGrade = double.Parse(LabsGradeString);
+			Console.WriteLine ( "Enter Projects Grade: ");
+				ProjectGradeString = Console.ReadLine();
+				ProjectGrade = double.Parse(ProjectsGradeString);
+			Console.WriteLine ( "Enter Participation Grade: ");
+				ParticipationGradeString = Console.ReadLine();
+				ParticipationGrade = double.Parse(ParticipationGradeString);
+
+			double grade = (ExamWeight * ExamsGrade + HomeworkWeight * HomeworkGrade + LabsWeight * LabsGrade + ProjectWeight * ProjectGrade
+				+ ParticipationWeight * ParticipationGrade / 100.0;
+
+				Console.WriteLine("Your grade is " + grade);
+
+				if (grade > "90") {
+					Console.WriteLine ("Your Grade is an A ");
+				}
+
+				else if (grade > "80") {
+					Console.WriteLine ("Your Grade is a B ");
+				}
+
+				else if (grade > "70") {
+					Console.WriteLine ("Your Grade is a C ");
+
+				else if (grade > "60") {
+						Console.WriteLine ("Your Grade is a D ");
+				}
+				else 
+				{
+					Console.WriteLine ("You are failing");
+		}
+	}
+}
