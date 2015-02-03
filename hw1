@@ -2,43 +2,54 @@ using System;
 
 namespace grade_calc.cs
 {
-	class MainClass
+	class MainClass // cleaned up a bunch of curly brace errors
 	{
-		public static void Main (string[] args)
+		static void Main () //removed "public" , nothing is accessing this method; removed string[] args , no array of strings
 		{
-			double ExamsWeight, LabsWeight, HomeworkWeight, ProjectWeight, ParticipationWeight;
+		
+			int ExamsWeight, LabsWeight, HomeworkWeight, ProjectWeight, ParticipationWeight; //weights should be ints per hmwk
 			double ExamsGrade, LabsGrade, HomeworkGrade, ProjectGrade, ParticipationGrade;
 			string ExamsWeightString, LabsWeightString, HomeworkWeightString, ProjectWeightString, ParticipationWeightString;
 			string ExamsGradeString, LabsGradeString, HomeworkGradeString, ProjectGradeString, ParticipationGradeString;
 			int sum = ParticipationGradeWeight + ProjectGradeWeight + HomeworkGradeWeight + LabsGradeWeight + ExamsGradeWeight
 						
 
+						
 			Console.WriteLine ("This Calculator will help you determine a grade in a given class. Remember to have the weights add to 100%");
-			Console.WriteLine ( "Enter Exams Weight: ");
-			ExamsWeightString = Console.ReadLine();
-			ExamsWeight = double.Parse(ExamsWeightString);
-			Console.WriteLine ( "Enter Labs Weight: ");
-			LabsWeightString = Console.ReadLine();
-			LabsWeight = double.Parse(LabsWeightString);
-			Console.WriteLine ( "Enter Homework Weight: ");
-			HomeworkWeightString = Console.ReadLine();
-			HomeworkWeight = double.Parse(HomeworkWeightString);
-			Console.WriteLine ( "Enter Projects Weight: ");
-			ProjectWeightString = Console.ReadLine();
-			ProjectWeight = double.Parse(ProjectsWeightString);
-			Console.WriteLine ( "Enter Participation Weight: ");
-			ParticipationWeightString = Console.ReadLine();
-			ParticipationWeight = double.Parse(ParticipationWeightString);
+			
+			//cleaned up some of the tabs for easier reading
+			//changed doubles to ints (see line 9)
+			
+			Console.WriteLine ("Enter Exams Weight: ");
+				ExamsWeightString = Console.ReadLine();
+				ExamsWeight = int.Parse(ExamsWeightString);
+			Console.WriteLine ("Enter Labs Weight: ");
+				LabsWeightString = Console.ReadLine();
+				LabsWeight = int.Parse(LabsWeightString);
+			Console.WriteLine ("Enter Homework Weight: ");
+				HomeworkWeightString = Console.ReadLine();
+				HomeworkWeight = int.Parse(HomeworkWeightString);
+			Console.WriteLine ("Enter Projects Weight: ");
+				ProjectWeightString = Console.ReadLine();
+				ProjectWeight = int.Parse(ProjectsWeightString);
+			Console.WriteLine ("Enter Participation Weight: ");
+				ParticipationWeightString = Console.ReadLine();
+				ParticipationWeight = int.Parse(ParticipationWeightString);
+			
+			// int GradeWeightChecker *STILL WORKING ON THIS* packages the grade weight check
+			
+				if (ParticipationWeight + ProjectWeight + HomeworkWeight + LabsWeight + ExamsWeight == "100") {
+				Console.WriteLine ("Congratulations! Weights add to 100% ");
+				}
 
-			if (ParticipationGradeWeight + ProjectGradeWeight + HomeworkGradeWeight + LabsGradeWeight + ExamsGradeWeight == "100") {
-				Console.WriteLine ("Weights add to 100% ");
-			}
+				else  {
+				Console.WriteLine ("Grades add to " + sum + " not 100%"); //fix typo
+				return; // added return to stop program if true *STILL NEED TO FINALIZE*
+				}
+			
 
-			else  {
-				Console.WriteLine ("Grades add to " + sum + " not 100");
-			}
-
-
+			
+			// i still need to review this section
 			Console.WriteLine ( "Enter Exams Grade: ");
 				ExamsGradeString = Console.ReadLine();
 				ExamsGrade = double.Parse(ExamsGradeString);
@@ -57,48 +68,63 @@ namespace grade_calc.cs
 
 
 
-
+			// this double looks fine
 			double grade = (ExamsWeight * ExamsGrade + HomeworkWeight * HomeworkGrade + LabsWeight * LabsGrade + ProjectWeight * ProjectGrade
-				+ ParticipationWeight * ParticipationGrade / 100.0;
+				+ ParticipationWeight * ParticipationGrade / 100.00); // added missed parenthesis added one more zero 
 
-				Console.WriteLine("Your grade is " + grade);
-
-				if (grade > "93") {
-					Console.WriteLine ("Your Grade is an A ");
-				}
-				else if (grade > "90") {
-							Console.WriteLine ("Your Grade is an A- ");
-				}
-				else if (grade > "87") {
-							Console.WriteLine ("Your Grade is a B+ ");
-				}
-				else if (grade > "83") {
-					Console.WriteLine ("Your Grade is a B ");
-				}
-				else if (grade > "80") {
-							Console.WriteLine ("Your Grade is a B- ");
-				}
-				else if (grade > "77") {
-							Console.WriteLine ("Your Grade is a C+ ");
-				}
-				else if (grade > "73") {
-								Console.WriteLine ("Your Grade is a C ");
-				}
-				else if (grade > "70") {
-					Console.WriteLine ("Your Grade is a C- ");
-				}
-				else if (grade > "67") {
-						Console.WriteLine ("Your Grade is a D+ ");
-				}
-				else if (grade > "63") {
-						Console.WriteLine ("Your Grade is a D ");
-				}					}
-				else if (grade > "60") {
-						Console.WriteLine ("Your Grade is a D- ");
-				}
-				else 
-				{
+								
+			// fixed double string printing
+			// still working on the if statements logic
+			string LetterGrade;
+			LetterGrade = {	
+					if (grade > "93") {
+					Console.WriteLine ("an A ");
+					}	
+					else if (grade > "90") {
+							Console.WriteLine ("an A- ");
+					}
+					else if (grade > "87") 
+					{
+							Console.WriteLine ("a B+ ");
+					}
+					else if (grade > "83") 
+					{
+					Console.WriteLine ("a B ");
+					}
+					else if (grade > "80") 
+					{
+							Console.WriteLine ("a B- ");
+					}
+					else if (grade > "77") 
+					{
+							Console.WriteLine ("a C+ ");
+					}
+					else if (grade > "73") {
+								Console.WriteLine ("a C ");
+					}
+					else if (grade > "70") 
+					{
+					Console.WriteLine ("a C- ");
+					}
+					else if (grade > "67") 
+					{
+						Console.WriteLine ("a D+ ");
+					}
+					else if (grade > "63") 
+					{
+						Console.WriteLine ("a D ");
+					}					
+					else if (grade > "60") 
+					{
+						Console.WriteLine ("a D- ");
+					}
+					else 
+					{
 					Console.WriteLine ("You are unlikely to pass ");
+					}
+				}
+				
+			Console.WriteLine("Your grade is " + LetterGrade);
 		}
 	}
 }
