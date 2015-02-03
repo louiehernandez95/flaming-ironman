@@ -10,35 +10,44 @@ namespace grade_calc.cs
 			double ExamsGrade, LabsGrade, HomeworkGrade, ProjectGrade, ParticipationGrade;
 			string ExamsWeightString, LabsWeightString, HomeworkWeightString, ProjectWeightString, ParticipationWeightString;
 			string ExamsGradeString, LabsGradeString, HomeworkGradeString, ProjectGradeString, ParticipationGradeString;
-
+			int sum = ParticipationGradeWeight + ProjectGradeWeight + HomeworkGradeWeight + LabsGradeWeight + ExamsGradeWeight
 						
 
 			Console.WriteLine ("This Calculator will help you determine a grade in a given class. Remember to have the weights add to 100%");
 			Console.WriteLine ( "Enter Exams Weight: ");
-				ExamsString = Console.ReadLine();
-				ExamsWeight = double.Parse(ExamsString);
+			ExamsWeightString = Console.ReadLine();
+			ExamsWeight = double.Parse(ExamsWeightString);
 			Console.WriteLine ( "Enter Labs Weight: ");
-				LabsString = Console.ReadLine();
-				LabsWeight = double.Parse(LabsString);
+			LabsWeightString = Console.ReadLine();
+			LabsWeight = double.Parse(LabsWeightString);
 			Console.WriteLine ( "Enter Homework Weight: ");
-				HomeworkString = Console.ReadLine();
-				HomeworkWeight = double.Parse(LabsString);
+			HomeworkWeightString = Console.ReadLine();
+			HomeworkWeight = double.Parse(HomeworkWeightString);
 			Console.WriteLine ( "Enter Projects Weight: ");
-				ProjectString = Console.ReadLine();
-				ProjectWeight = double.Parse(ProjectsString);
+			ProjectWeightString = Console.ReadLine();
+			ProjectWeight = double.Parse(ProjectsWeightString);
 			Console.WriteLine ( "Enter Participation Weight: ");
-				ParticipationString = Console.ReadLine();
-				ParticipationWeight = double.Parse(ParticipationString);
+			ParticipationWeightString = Console.ReadLine();
+			ParticipationWeight = double.Parse(ParticipationWeightString);
+
+			if (ParticipationGradeWeight + ProjectGradeWeight + HomeworkGradeWeight + LabsGradeWeight + ExamsGradeWeight == "100") {
+				Console.WriteLine ("Weights add to 100% ");
+			}
+
+			else  {
+				Console.WriteLine ("Grades add to " + sum + " not 100");
+			}
+
 
 			Console.WriteLine ( "Enter Exams Grade: ");
 				ExamsGradeString = Console.ReadLine();
 				ExamsGrade = double.Parse(ExamsGradeString);
 			Console.WriteLine ( "Enter Labs Grade: ");
 				LabsGradeString = Console.ReadLine();
-				HomeworkGrade = double.Parse(LabsGradeString);
+				LabsGrade = double.Parse(LabsGradeString);
 			Console.WriteLine ( "Enter Homework Grade: ");
 				HomeworkGradeString = Console.ReadLine();
-				LabsGrade = double.Parse(LabsGradeString);
+				HomeworkGrade = double.Parse(HomeworkGradeString);
 			Console.WriteLine ( "Enter Projects Grade: ");
 				ProjectGradeString = Console.ReadLine();
 				ProjectGrade = double.Parse(ProjectsGradeString);
@@ -46,28 +55,50 @@ namespace grade_calc.cs
 				ParticipationGradeString = Console.ReadLine();
 				ParticipationGrade = double.Parse(ParticipationGradeString);
 
-			double grade = (ExamWeight * ExamsGrade + HomeworkWeight * HomeworkGrade + LabsWeight * LabsGrade + ProjectWeight * ProjectGrade
+
+
+
+			double grade = (ExamsWeight * ExamsGrade + HomeworkWeight * HomeworkGrade + LabsWeight * LabsGrade + ProjectWeight * ProjectGrade
 				+ ParticipationWeight * ParticipationGrade / 100.0;
 
 				Console.WriteLine("Your grade is " + grade);
 
-				if (grade > "90") {
+				if (grade > "93") {
 					Console.WriteLine ("Your Grade is an A ");
 				}
-
-				else if (grade > "80") {
+				else if (grade > "90") {
+							Console.WriteLine ("Your Grade is an A- ");
+				}
+				else if (grade > "87") {
+							Console.WriteLine ("Your Grade is a B+ ");
+				}
+				else if (grade > "83") {
 					Console.WriteLine ("Your Grade is a B ");
 				}
-
+				else if (grade > "80") {
+							Console.WriteLine ("Your Grade is a B- ");
+				}
+				else if (grade > "77") {
+							Console.WriteLine ("Your Grade is a C+ ");
+				}
+				else if (grade > "73") {
+								Console.WriteLine ("Your Grade is a C ");
+				}
 				else if (grade > "70") {
-					Console.WriteLine ("Your Grade is a C ");
-
-				else if (grade > "60") {
+					Console.WriteLine ("Your Grade is a C- ");
+				}
+				else if (grade > "67") {
+						Console.WriteLine ("Your Grade is a D+ ");
+				}
+				else if (grade > "63") {
 						Console.WriteLine ("Your Grade is a D ");
+				}					}
+				else if (grade > "60") {
+						Console.WriteLine ("Your Grade is a D- ");
 				}
 				else 
 				{
-					Console.WriteLine ("You are failing");
+					Console.WriteLine ("You are unlikely to pass ");
 		}
 	}
 }
