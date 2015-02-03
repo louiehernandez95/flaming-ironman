@@ -9,8 +9,8 @@ class MainClass
 		string ExamsWeightString, LabsWeightString, HomeworkWeightString, ProjectWeightString, ParticipationWeightString;
 		string ExamsGradeString, LabsGradeString, HomeworkGradeString, ProjectGradeString, ParticipationGradeString;
 
-
-		Console.WriteLine ("This Calculator will help you determine a grade in a given class. Remember to have the weights add to 100%");
+		
+			Console.WriteLine ("This Calculator will help you determine a grade in a given class. Remember to have the weights add to 100%");
 
 		Console.WriteLine ("Enter Exams Weight: ");
 		ExamsWeightString = Console.ReadLine();
@@ -35,7 +35,7 @@ class MainClass
 			Console.WriteLine ("Congratulations! Weights add to 100% ");
 		}
 		else {
-			Console.WriteLine ("Grades add to " + sum + " not 100%"); //fix typo
+			Console.WriteLine ("Grades add to " + sum + " not 100%. The program is ending."); //fix typo
 			return; // added return to stop program if true *STILL NEED TO FINALIZE*
 		}
 		// i still need to review this section
@@ -69,7 +69,7 @@ class MainClass
 			GradeLetter = ", an A ";
 		}
 		else if (grade >= 90) {
-			GradeLetter = ", an A- ";
+		GradeLetter = ", an A- ";
 		}
 		else if (grade >= 87) {
 			GradeLetter = ", a B+ ";
@@ -103,9 +103,9 @@ class MainClass
 		}
 		LetterGradeMsg = GradeLetter;
 		Console.WriteLine("Your grade is " + grade  + LetterGradeMsg);
-	}
-}
-
+		}
+		}
+		
 
 
 
