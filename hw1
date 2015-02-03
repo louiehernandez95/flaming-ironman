@@ -2,12 +2,12 @@ using System;
 
 namespace grade_calc.cs
 {
-	class MainClass // cleaned up a bunch of curly brace errors
+	class MainClass 
 	{
-		static void Main () //removed "public" , nothing is accessing this method; removed string[] args , no array of strings
+		static void Main () 
 		{
 		
-			int ExamsWeight, LabsWeight, HomeworkWeight, ProjectWeight, ParticipationWeight; //weights should be ints per hmwk
+			int ExamsWeight, LabsWeight, HomeworkWeight, ProjectWeight, ParticipationWeight;
 			double ExamsGrade, LabsGrade, HomeworkGrade, ProjectGrade, ParticipationGrade;
 			string ExamsWeightString, LabsWeightString, HomeworkWeightString, ProjectWeightString, ParticipationWeightString;
 			string ExamsGradeString, LabsGradeString, HomeworkGradeString, ProjectGradeString, ParticipationGradeString;
@@ -17,9 +17,7 @@ namespace grade_calc.cs
 						
 			Console.WriteLine ("This Calculator will help you determine a grade in a given class. Remember to have the weights add to 100%");
 			
-			//cleaned up some of the tabs for easier reading
-			//changed doubles to ints (see line 9)
-			
+						
 			Console.WriteLine ("Enter Exams Weight: ");
 				ExamsWeightString = Console.ReadLine();
 				ExamsWeight = int.Parse(ExamsWeightString);
@@ -73,57 +71,57 @@ namespace grade_calc.cs
 				+ ParticipationWeight * ParticipationGrade / 100.00); // added missed parenthesis added one more zero 
 
 								
-			// fixed double string printing
 			// still working on the if statements logic
-			string LetterGrade;
-			LetterGrade = {	
-					if (grade > "93") {
-					Console.WriteLine ("an A ");
+			//changed "Less than" signs to "Less than or equal to"
+			// not final string LetterGradeMessage = string;
+					{	
+					if (grade >= 93) {
+						Console.WriteLine ("an A ");
 					}	
-					else if (grade > "90") {
-							Console.WriteLine ("an A- ");
+					else if (grade >= 90) {
+						Console.WriteLine ("an A- ");
 					}
-					else if (grade > "87") 
+					else if (grade >= 87) 
 					{
-							Console.WriteLine ("a B+ ");
+						Console.WriteLine ("a B+ ");
 					}
-					else if (grade > "83") 
+					else if (grade >= 83) 
 					{
-					Console.WriteLine ("a B ");
+						Console.WriteLine ("a B ");
 					}
-					else if (grade > "80") 
+					else if (grade >= 80) 
 					{
-							Console.WriteLine ("a B- ");
+						Console.WriteLine ("a B- ");
 					}
-					else if (grade > "77") 
+					else if (grade >= 77) 
 					{
-							Console.WriteLine ("a C+ ");
+						Console.WriteLine ("a C+ ");
 					}
-					else if (grade > "73") {
-								Console.WriteLine ("a C ");
+					else if (grade >= 73) {
+						Console.WriteLine ("a C ");
 					}
-					else if (grade > "70") 
+					else if (grade >= 70) 
 					{
-					Console.WriteLine ("a C- ");
+						Console.WriteLine ("a C- ");
 					}
-					else if (grade > "67") 
+					else if (grade >= 67) 
 					{
 						Console.WriteLine ("a D+ ");
 					}
-					else if (grade > "63") 
+					else if (grade >= 63) 
 					{
 						Console.WriteLine ("a D ");
 					}					
-					else if (grade > "60") 
+					else if (grade >= 60) 
 					{
 						Console.WriteLine ("a D- ");
 					}
 					else 
 					{
-					Console.WriteLine ("You are unlikely to pass ");
+						Console.WriteLine ("You are unlikely to pass ");
 					}
 				}
-				
+			LetterGrade = ConsoleReadLine();
 			Console.WriteLine("Your grade is " + LetterGrade);
 		}
 	}
