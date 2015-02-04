@@ -1,8 +1,7 @@
-
-?using System;
+using System;
 class MainClass
 {
-	static void Main ()
+	static void Main()
 	{
 		int ExamsWeight, LabsWeight, HomeworkWeight, ProjectWeight, ParticipationWeight;
 		double ExamsGrade, LabsGrade, HomeworkGrade, ProjectGrade, ParticipationGrade;
@@ -10,57 +9,64 @@ class MainClass
 		string ExamsGradeString, LabsGradeString, HomeworkGradeString, ProjectGradeString, ParticipationGradeString;
 
 		
-			Console.WriteLine ("This Calculator will help you determine a grade in a given class. Remember to have the weights add to 100%");
+		Console.WriteLine ("This Calculator will help you determine a grade in a given class. Remember to have the weights add to 100%");
 
 		Console.WriteLine ("Enter Exams Weight: ");
 		ExamsWeightString = Console.ReadLine();
 		ExamsWeight = int.Parse(ExamsWeightString);
+		
 		Console.WriteLine ("Enter Labs Weight: ");
 		LabsWeightString = Console.ReadLine();
 		LabsWeight = int.Parse(LabsWeightString);
+		
 		Console.WriteLine ("Enter Homework Weight: ");
 		HomeworkWeightString = Console.ReadLine();
 		HomeworkWeight = int.Parse(HomeworkWeightString);
+		
 		Console.WriteLine ("Enter Projects Weight: ");
 		ProjectWeightString = Console.ReadLine();
 		ProjectWeight = int.Parse(ProjectWeightString);
+		
 		Console.WriteLine ("Enter Participation Weight: ");
 		ParticipationWeightString = Console.ReadLine();
 		ParticipationWeight = int.Parse(ParticipationWeightString);
-		// int GradeWeightChecker *STILL WORKING ON THIS* packages the grade weight check
-
+		
 		int sum = ParticipationWeight + ProjectWeight + HomeworkWeight + LabsWeight + ExamsWeight;
 
 		if (ParticipationWeight + ProjectWeight + HomeworkWeight + LabsWeight + ExamsWeight == 100) {
 			Console.WriteLine ("Congratulations! Weights add to 100% ");
 		}
 		else {
-			Console.WriteLine ("Grades add to " + sum + " not 100%. The program is ending."); //fix typo
-			return; // added return to stop program if true *STILL NEED TO FINALIZE*
+			Console.WriteLine ("Grades add to " + sum + " not 100%. The program is ending.");
+			return;
 		}
+		
 		// i still need to review this section
-		Console.WriteLine ( "Enter Exams Grade: ");
+		Console.WriteLine ("Enter Exams Grade: ");
 		ExamsGradeString = Console.ReadLine();
 		ExamsGrade = double.Parse(ExamsGradeString);
-		Console.WriteLine ( "Enter Labs Grade: ");
+		
+		Console.WriteLine ("Enter Labs Grade: ");
 		LabsGradeString = Console.ReadLine();
 		LabsGrade = double.Parse(LabsGradeString);
-		Console.WriteLine ( "Enter Homework Grade: ");
+		
+		Console.WriteLine ("Enter Homework Grade: ");
 		HomeworkGradeString = Console.ReadLine();
 		HomeworkGrade = double.Parse(HomeworkGradeString);
-		Console.WriteLine ( "Enter Projects Grade: ");
+		
+		Console.WriteLine ("Enter Projects Grade: ");
 		ProjectGradeString = Console.ReadLine();
 		ProjectGrade = double.Parse(ProjectGradeString);
-		Console.WriteLine ( "Enter Participation Grade: ");
+		
+		Console.WriteLine ("Enter Participation Grade: ");
 		ParticipationGradeString = Console.ReadLine();
 		ParticipationGrade = double.Parse(ParticipationGradeString);
-		// this double looks fine
+		
 
 		double grade = ((ExamsWeight * ExamsGrade + HomeworkWeight * HomeworkGrade + LabsWeight * LabsGrade + ProjectWeight * ProjectGrade
-			+ ParticipationWeight * ParticipationGrade) / 100.00); // added missed parenthesis added one more zero
-		// still working on the if statements logic
-		//changed "Less than" signs to "Less than or equal to"
-
+			+ ParticipationWeight * ParticipationGrade) / 100.00);
+		
+		
 		string LetterGradeMsg, GradeLetter;
 		if (grade == 100){
 			GradeLetter = ", an A+ ";
@@ -103,8 +109,8 @@ class MainClass
 		}
 		LetterGradeMsg = GradeLetter;
 		Console.WriteLine("Your grade is " + grade  + LetterGradeMsg);
-		}
-		}
+	}
+}
 		
 
 
