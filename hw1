@@ -153,24 +153,24 @@ class MainClass
 			}
 		}
 			
-			// checks assigned letter grade for validity and prints final message to user
-			// if not in range, prints error and returns to start of programs for user input
-			// should be finalized
-			public void GradeLetterLogicChecker ()
-			{	
-				bool Success;
-				if (GradeLetterLogic != GradeNotInRangeString){
-					bool Success = true;
-					Console.WriteLine("Your grade is " + FinalGrade + LetterGradeMsg);
-				} else 
-					{
-					bool Success = false;
-					Console.WriteLine(GradeNotInRangeString);
-					}
-				if (bool Success = false){
-				return;
+		// checks assigned letter grade for validity and prints final message to user
+		// if not in range, prints error and returns to start of programs for user input
+		// should be finalized
+		public void GradeLetterLogicChecker ()
+		{	
+			bool Success;
+			if (GradeLetterLogic != GradeNotInRangeString){
+				bool Success = true;
+				Console.WriteLine("Your grade is " + FinalGrade + LetterGradeMsg);
+			} else 
+				{
+				bool Success = false;
+				Console.WriteLine(GradeNotInRangeString);
 				}
+			if (bool Success = false){
+			return;
 			}
+		}
 	// if program gets this far, all checks passed, in theory
 	Console.WriteLine("Code tests passed!");
 	}
