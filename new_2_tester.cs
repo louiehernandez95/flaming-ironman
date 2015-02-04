@@ -1,44 +1,43 @@
 using System;
 class MainClass
 {
-	public void UserWeightInputPrompt()
+	public static void UserWeightInputPrompt()
 	{	
+		int WeightSum, ExamsWeight, LabsWeight, HomeworkWeight, ProjectWeight, ParticipationWeight;
+        string ExamsWeightString, LabsWeightString, HomeworkWeightString, ProjectWeightString, ParticipationWeightString;
+         
+         int WeightTest = 0;
+         while (WeightTest != 100)
+         {
+            Console.WriteLine ("Enter Exams Weight: ");
+            ExamsWeightString = Console.ReadLine ();
+            ExamsWeight = int.Parse (ExamsWeightString);
 
-		int ExamsWeight, LabsWeight, HomeworkWeight, ProjectWeight, ParticipationWeight;
-		string ExamsWeightString, LabsWeightString, HomeworkWeightString, ProjectWeightString, ParticipationWeightString;
+            Console.WriteLine ("Enter Labs Weight: ");
+            LabsWeightString = Console.ReadLine ();
+            LabsWeight = int.Parse (LabsWeightString);
 
-		int WeightSum;
-		do
-		{
-			Console.WriteLine ("Enter Exams Weight: ");
-			ExamsWeightString = Console.ReadLine ();
-			ExamsWeight = int.Parse (ExamsWeightString);
-		
-			Console.WriteLine ("Enter Labs Weight: ");
-			LabsWeightString = Console.ReadLine ();
-			LabsWeight = int.Parse (LabsWeightString);
-		
-			Console.WriteLine ("Enter Homework Weight: ");
-			HomeworkWeightString = Console.ReadLine ();
-			HomeworkWeight = int.Parse (HomeworkWeightString);
-		
-			Console.WriteLine ("Enter Projects Weight: ");
-			ProjectWeightString = Console.ReadLine ();
-			ProjectWeight = int.Parse (ProjectWeightString);
-		
-			Console.WriteLine ("Enter Participation Weight: ");
-			ParticipationWeightString = Console.ReadLine ();
-			ParticipationWeight = int.Parse (ParticipationWeightString);
-	
-			WeightSum = ExamsWeight + LabsWeight + HomeworkWeight + ProjectWeight + ParticipationWeight;
-		} while (WeightSum != 100);
+            Console.WriteLine ("Enter Homework Weight: ");
+            HomeworkWeightString = Console.ReadLine ();
+            HomeworkWeight = int.Parse (HomeworkWeightString);
 
-		if (WeightSum == 100) {
-			Console.WriteLine ("Congratulations! Weights add to 100% ");
-		}
-		else {
-			Console.WriteLine ("Grades add to " + WeightSum + " not 100%. Please try again.");
-			return;
-		}
+            Console.WriteLine ("Enter Projects Weight: ");
+            ProjectWeightString = Console.ReadLine ();
+            ProjectWeight = int.Parse (ProjectWeightString);
+
+            Console.WriteLine ("Enter Participation Weight: ");
+            ParticipationWeightString = Console.ReadLine ();
+            ParticipationWeight = int.Parse (ParticipationWeightString);
+
+            WeightSum = ExamsWeight + LabsWeight + HomeworkWeight + ProjectWeight + ParticipationWeight;
+            WeightTest = WeightSum;
+
+         if (WeightTest == 100) {
+            Console.WriteLine ("Congratulations! Weights add to 100% ");
+         } else if (WeightTest != 100) {
+            Console.WriteLine ("Grades add to " + WeightTest + " not 100%. Please try again.");
+         } else
+            return;
+         }
 	}
 }
