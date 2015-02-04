@@ -8,7 +8,6 @@ class MainClass
 		string ExamsWeightString, LabsWeightString, HomeworkWeightString, ProjectWeightString, ParticipationWeightString;
 		string ExamsGradeString, LabsGradeString, HomeworkGradeString, ProjectGradeString, ParticipationGradeString;
 		string GradeNotInRangeString = "Oops, your grade is not between 0 and 100%. Try your inputs again."
-		int WeightSum;
 		
 		Console.WriteLine ("This Calculator will help you determine a grade in a given class. Remember to have the weights add to 100%");
 		
@@ -18,6 +17,7 @@ class MainClass
 		// if loops prints error
 		public static void UserWeightInputPrompt()
 		{ 
+			int WeightSum;
 			int WeightTest = 0;
 			while (WeightTest != 100)
 			{
