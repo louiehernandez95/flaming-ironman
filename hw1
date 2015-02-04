@@ -10,7 +10,52 @@ class MainClass
 
 		
 		Console.WriteLine ("This Calculator will help you determine a grade in a given class. Remember to have the weights add to 100%");
+		//added a section that properly loops if user fails to enter correct weights
+		/*
+		public static void UserWeightInputPrompt()
+		{	
+			int WeightSum, ExamsWeight, LabsWeight, HomeworkWeight, ProjectWeight, ParticipationWeight;
+			string ExamsWeightString, LabsWeightString, HomeworkWeightString, ProjectWeightString, ParticipationWeightString;
+			 
+			 int WeightTest = 0;
+			 while (WeightTest != 100)
+			 {
+				Console.WriteLine ("Enter Exams Weight: ");
+				ExamsWeightString = Console.ReadLine ();
+				ExamsWeight = int.Parse (ExamsWeightString);
 
+				Console.WriteLine ("Enter Labs Weight: ");
+				LabsWeightString = Console.ReadLine ();
+				LabsWeight = int.Parse (LabsWeightString);
+
+				Console.WriteLine ("Enter Homework Weight: ");
+				HomeworkWeightString = Console.ReadLine ();
+				HomeworkWeight = int.Parse (HomeworkWeightString);
+
+				Console.WriteLine ("Enter Projects Weight: ");
+				ProjectWeightString = Console.ReadLine ();
+				ProjectWeight = int.Parse (ProjectWeightString);
+
+				Console.WriteLine ("Enter Participation Weight: ");
+				ParticipationWeightString = Console.ReadLine ();
+				ParticipationWeight = int.Parse (ParticipationWeightString);
+
+				WeightSum = ExamsWeight + LabsWeight + HomeworkWeight + ProjectWeight + ParticipationWeight;
+				WeightTest = WeightSum;
+
+			 if (WeightTest == 100) {
+				Console.WriteLine ("Congratulations! Weights add to 100% ");
+			 } else if (WeightTest != 100) {
+				Console.WriteLine ("Grades add to " + WeightTest + " not 100. Please try again.");
+			 } else
+				return;
+			}
+		}
+		 
+		*/
+		//added a section that properly loops if user fails to enter correct weights
+		
+		//this section below comment should be replaced by commented out section above code
 		Console.WriteLine ("Enter Exams Weight: ");
 		ExamsWeightString = Console.ReadLine();
 		ExamsWeight = int.Parse(ExamsWeightString);
@@ -40,8 +85,11 @@ class MainClass
 			Console.WriteLine ("Grades add to " + sum + " not 100%. The program is ending.");
 			return;
 		}
+		//this section above comment should be replaced by commented out section above code
+		
 		
 		// i still need to review this section
+		//usergradeinputpromt section
 		Console.WriteLine ("Enter Exams Grade: ");
 		ExamsGradeString = Console.ReadLine();
 		ExamsGrade = double.Parse(ExamsGradeString);
@@ -66,7 +114,7 @@ class MainClass
 		double grade = ((ExamsWeight * ExamsGrade + HomeworkWeight * HomeworkGrade + LabsWeight * LabsGrade + ProjectWeight * ProjectGrade
 			+ ParticipationWeight * ParticipationGrade) / 100.00);
 		
-		
+		//GradeLetterLogic Section
 		string LetterGradeMsg, GradeLetter;
 		if (grade == 100){
 			GradeLetter = ", an A+ ";
@@ -109,6 +157,7 @@ class MainClass
 		}
 		LetterGradeMsg = GradeLetter;
 		Console.WriteLine("Your grade is " + grade  + LetterGradeMsg);
+		//GradeLetterLogic Section
 	}
 }
 		
