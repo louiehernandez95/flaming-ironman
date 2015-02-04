@@ -35,7 +35,7 @@ class MainClass
          if (WeightTest == 100) {
             Console.WriteLine ("Congratulations! Weights add to 100% ");
          } else if (WeightTest != 100) {
-            Console.WriteLine ("Grades add to " + WeightTest + " not 100%. Please try again.");
+            Console.WriteLine ("Grades add to " + WeightTest + " not 100. Please try again.");
          } else
             return;
          }
