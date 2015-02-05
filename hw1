@@ -1,35 +1,32 @@
 using System;
 class MainClass
 { // still debugging 
-   public static void StringAndVariableRepository()
-   {
-		int ExamsWeight, LabsWeight, HomeworkWeight, ProjectWeight, ParticipationWeight;
-		double ExamsGrade, LabsGrade, HomeworkGrade, ProjectGrade, ParticipationGrade, GradeTotal;
-		string ExamsWeightString, LabsWeightString, HomeworkWeightString, ProjectWeightString, ParticipationWeightString;
-		string ExamsGradeString, LabsGradeString, HomeworkGradeString, ProjectGradeString, ParticipationGradeString;
-		string ErrorMsg = ("Oops, looks like something went wrong. Try your inputs again.");
-		string Greeting = ("This Calculator will help you determine a grade in a given class. Remember to have the weights add to 100%"));
-		bool Success;
-		string LetterGradeMsg, GradeLetter;
-   }
-   //prints error msg
-   public static string Error()
-   {
-		Console.WriteLine(ErrorMsg);
-   }
-   
-   
-   // prompts user for weights
-   // tests if weights add to 100, loops if sum does not equal 100
-   // if loops prints error
-   //working on this
-   public static void UserWeightStringInputAndOutput()
-   {
-      do UserWeightPrompt()
+   static void Main()
+   {  
+
+      int ExamsWeight, LabsWeight, HomeworkWeight, ProjectWeight, ParticipationWeight;
+      double ExamsGrade, LabsGrade, HomeworkGrade, ProjectGrade, ParticipationGrade, GradeTotal;
+      string ExamsWeightString, LabsWeightString, HomeworkWeightString, ProjectWeightString, ParticipationWeightString;
+      string ExamsGradeString, LabsGradeString, HomeworkGradeString, ProjectGradeString, ParticipationGradeString;
+      string ErrorMsg = ("Oops, looks like something went wrong. Try your inputs again.");
+      string Greeting = ("This Calculator will help you determine a grade in a given class. Remember to have the weights add to 100%");
+      string Error () = Console.WriteLine(ErrorMsg);
+      string LetterGradeMsg, GradeLetter;
+
+      //prints error msg
+
+
+      // prompts user for weights
+      // tests if weights add to 100, loops if sum does not equal 100
+      // if loops prints error
+      //working on this
+      string UserWeightStringInputAndOutput(UserWeightPrompt);
+         UserWeightPrompt ();
+         do 
          {
             Console.WriteLine ("Enter Exams Weight: ");
-            ExamsWeightString = Console.ReadLine ();
-            ExamsWeight = int.Parse (ExamsWeightString);
+            string ExamsWeightString = Console.ReadLine ();
+            int ExamsWeight = int.Parse (ExamsWeightString);
 
             Console.WriteLine ("Enter Labs Weight: ");
             LabsWeightString = Console.ReadLine ();
@@ -49,148 +46,137 @@ class MainClass
 
             int WeightSum = (ExamsWeight + LabsWeight + HomeworkWeight + ProjectWeight + ParticipationWeight);
             return WeightSum;
-      } while (WeightSum != 100);
-   
-      if (UserWeightPrompt == 100) {
-         Console.WriteLine ("Congratulations! Weights add to 100% ");
-      } else if (UserWeightPrompt != 100) {
-         Console.WriteLine ("Grades add to " + UserWeightPrompt + " not 100. Please try again.");
-      } else
-         return;
-   }
+         } while (WeightSum != 100);
+
+         if (UserWeightPrompt == 100) {
+            Console.WriteLine ("Congratulations! Weights add to 100% ");
+         } else if (UserWeightPrompt != 100) {
+            Console.WriteLine ("Grades add to " + UserWeightPrompt + " not 100. Please try again.");
+         } else
+            return;
+      }
 
 
 
-   // container for user input prompts
-   // outputs final grade value so logic can assign letter grade
-   // should be final
-   public static void UserGradeInputPrompt()
-   {  
-		// While loop prompts for and receives user inputs, conducts calculations, complete with nested user input checker
-		// should be final
-		Console.WriteLine ("Enter Exams Grade: ");
-		ExamsGradeString = Console.ReadLine();
-		ExamsGrade = double.Parse(ExamsGradeString);
-
-		Console.WriteLine ("Enter Labs Grade: ");
-		LabsGradeString = Console.ReadLine();
-		LabsGrade = double.Parse(LabsGradeString);
-
-		Console.WriteLine ("Enter Homework Grade: ");
-		HomeworkGradeString = Console.ReadLine();
-		HomeworkGrade = double.Parse(HomeworkGradeString);
-
-		Console.WriteLine ("Enter Projects Grade: ");
-		ProjectGradeString = Console.ReadLine();
-		ProjectGrade = double.Parse(ProjectGradeString);
-
-		Console.WriteLine ("Enter Participation Grade: ");
-		ParticipationGradeString = Console.ReadLine();
-		ParticipationGrade = double.Parse(ParticipationGradeString);
-
-		GradeTotal = ((ExamsWeight * ExamsGrade + HomeworkWeight * HomeworkGrade + LabsWeight * LabsGrade + ProjectWeight * ProjectGrade + ParticipationWeight * ParticipationGrade) / 100.00));
-		
-		//tests if output is within range, if not, re executes function
-    
-		if (GradeTotal <=100 && >=0){
-		FinalGrade = GradeTotal;
-		}
-		else if(GradeTotal >100 || <0){
-			Error();
-			UserGradeInputPrompt();
-		}
-	}
-
-
-
-
-   // logic for assigning a letter grade
-   // should be final
-   public static void GradeLetterLogic()
-   {
-      if (FinalGrade == 100){
-         GradeLetter = ", an A+ ";
-      }
-      else if (FinalGrade >= 93) {
-         GradeLetter = ", an A ";
-      }
-      else if (FinalGrade >= 90) {
-         GradeLetter = ", an A- ";
-      }
-      else if (FinalGrade >= 87) {
-         GradeLetter = ", a B+ ";
-      }
-      else if (FinalGrade >= 83) {
-         GradeLetter = ", a B ";
-      }
-      else if (FinalGrade >= 80) {
-         GradeLetter = ", a B- ";
-      }
-      else if (FinalGrade >= 77) {
-         GradeLetter = ", a C+ ";
-      }
-      else if (FinalGrade >= 73) {
-         GradeLetter = ", a C ";
-      }
-      else if (FinalGrade >= 70) {
-         GradeLetter = ", a C- ";
-      }
-      else if (FinalGrade >= 67) {
-         GradeLetter = ", a D+ ";
-      }
-      else if (FinalGrade >= 63) {
-         GradeLetter = ", a D ";
-      }
-      else if (FinalGrade >= 60) {
-         GradeLetter = ", a D- ";
-      }
-      else if (FinalGrade < 60 & > 0) {
-         GradeLetter = ", a F ";
-      }
-      else if (FinalGrade > 100 || < 0){
-         GradeLetter = (ErrorMsg);
-      }
-   }
-
-   
-   
-   // checks assigned letter grade for validity and prints final message to user
-   // if not in range, prints error and returns to start of programs for user input
-   // should be finalized
-   public static bool GradeLetterLogicChecker ()
-   {  
-		if (GradeLetterLogic != ErrorMsg){
-			bool Success = true;
-		} else
-		{
-			bool Success = false;
-			Error();
-		}
-		if (bool Success = false){
-        return Success;
-        }
-    }
-   
-   
-   //prints final user msg
-   public static void FinalOutputPrinter()
-   {
-      if (GradeLetterLogicChecker = true) {
-         Console.WriteLine("Your grade is " + FinalGrade + LetterGradeMsg);
-      }else (GradeLetterLogicChecker = false){
-		UserGradeInputPrompt();
-	  }
-   }
-   static void Main()
-   {
-	  Console.WriteLine(Greeting);
-	  UserWeightStringInputAndOutput();
+      // container for user input prompts
+      // outputs final grade value so logic can assign letter grade
+      // should be final
       UserGradeInputPrompt();
+      {  
+         // While loop prompts for and receives user inputs, conducts calculations, complete with nested user input checker
+         // should be final
+         Console.WriteLine ("Enter Exams Grade: ");
+         ExamsGradeString = Console.ReadLine();
+         ExamsGrade = double.Parse(ExamsGradeString);
+
+         Console.WriteLine ("Enter Labs Grade: ");
+         LabsGradeString = Console.ReadLine();
+         LabsGrade = double.Parse(LabsGradeString);
+
+         Console.WriteLine ("Enter Homework Grade: ");
+         HomeworkGradeString = Console.ReadLine();
+         HomeworkGrade = double.Parse(HomeworkGradeString);
+
+         Console.WriteLine ("Enter Projects Grade: ");
+         ProjectGradeString = Console.ReadLine();
+         ProjectGrade = double.Parse(ProjectGradeString);
+
+         Console.WriteLine ("Enter Participation Grade: ");
+         ParticipationGradeString = Console.ReadLine();
+         ParticipationGrade = double.Parse(ParticipationGradeString);
+
+         GradeTotal = ((ExamsWeight * ExamsGrade + HomeworkWeight * HomeworkGrade + LabsWeight * LabsGrade + ProjectWeight * ProjectGrade + ParticipationWeight * ParticipationGrade) / 100.00));
+
+         //tests if output is within range, if not, re executes function
+
+         if (GradeTotal <=100 && >=0){
+            FinalGrade = GradeTotal;
+         }
+         if(GradeTotal >100 || <0){
+            Error();
+            UserGradeInputPrompt();
+         }
+      }
+
+
+
+
+      // logic for assigning a letter grade
+      // should be final
       GradeLetterLogic();
+      {
+         if (FinalGrade == 100){
+            GradeLetter = ", an A+ ";
+         }
+         else if (FinalGrade >= 93) {
+            GradeLetter = ", an A ";
+         }
+         else if (FinalGrade >= 90) {
+            GradeLetter = ", an A- ";
+         }
+         else if (FinalGrade >= 87) {
+            GradeLetter = ", a B+ ";
+         }
+         else if (FinalGrade >= 83) {
+            GradeLetter = ", a B ";
+         }
+         else if (FinalGrade >= 80) {
+            GradeLetter = ", a B- ";
+         }
+         else if (FinalGrade >= 77) {
+            GradeLetter = ", a C+ ";
+         }
+         else if (FinalGrade >= 73) {
+            GradeLetter = ", a C ";
+         }
+         else if (FinalGrade >= 70) {
+            GradeLetter = ", a C- ";
+         }
+         else if (FinalGrade >= 67) {
+            GradeLetter = ", a D+ ";
+         }
+         else if (FinalGrade >= 63) {
+            GradeLetter = ", a D ";
+         }
+         else if (FinalGrade >= 60) {
+            GradeLetter = ", a D- ";
+         }
+         else if (FinalGrade < 60 && >= 0) {
+            GradeLetter = ", a F ";
+         }
+         if (FinalGrade > 100 || < 0){
+            GradeLetter = (ErrorMsg);
+         }
+      }
+
+
+
+      // checks assigned letter grade for validity and prints final message to user
+      // if not in range, prints error and returns to start of programs for user input
+      // should be finalized
       GradeLetterLogicChecker ();
+      {  
+         if (GradeLetterLogic != ErrorMsg){
+            bool Success = true;
+         } else
+         {
+            bool Success = false;
+            Error();
+         }
+         if (Success = false){
+            return Success;
+         }
+      }
+
+
+      //prints final user msg
       FinalOutputPrinter();
-      // if program gets this far, all checks passed, in theory
-      Console.WriteLine("Code tests passed!");        
-   }
-}
+      {
+         if (GradeLetterLogicChecker = true) {
+            Console.WriteLine ("Your grade is " + FinalGrade + LetterGradeMsg);
+         } else
+            (GradeLetterLogicChecker = false);
+         UserGradeInputPrompt();
+      }
+   } 
 }

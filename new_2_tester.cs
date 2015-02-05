@@ -38,7 +38,7 @@
 					//uses an int value to determine if the while loop should continue, if in proper range assigns string value, if not in range prints error message
 					int GradeTotalTest ()
 					{
-						if (GradeTotal <= 100 & GradeTotal >= 0){
+						if (GradeTotal <= 100 && GradeTotal >= 0){
 							FinalGrade = GradeTotal;
 							return 1;
 						}
@@ -93,10 +93,10 @@
 				else if (FinalGrade >= 60) {
 					GradeLetter = ", a D- ";
 				}
-				else if (FinalGrade < 60 & > 0) {
+				else if (FinalGrade < 60 && > 0 FinalGrade) {
 					GradeLetter = ", a F ";
 				}
-				else if (FinalGrade > 100 | < 0){
+				else if (FinalGrade > 100 || < 0 FinalGrade){
 					GradeLetter = (GradeNotInRangeString);
 				}
 			}
@@ -108,14 +108,14 @@
 			{	
 				bool Success;
 				if (GradeLetterLogic != GradeNotInRangeString){
-					bool Success = true;
+					Success = true;
 					Console.WriteLine("Your grade is " + FinalGrade + LetterGradeMsg);
 				} else 
 					{
-					bool Success = false;
+					Success = false;
 					Console.WriteLine(GradeNotInRangeString);
 					}
-				if (bool Success = false){
+				if (Success = false){
 				return;
 				}
 			}
