@@ -11,8 +11,8 @@ namespace hw1_alternate
          double ExamsGrade, LabsGrade, HomeworkGrade, ProjectGrade, ParticipationGrade;
          string ExamsWeightString, LabsWeightString, HomeworkWeightString, ProjectWeightString, ParticipationWeightString;
          string ExamsGradeString, LabsGradeString, HomeworkGradeString, ProjectGradeString, ParticipationGradeString;
-         string ErrorMsg = ("Oops, looks like something went wrong. Try your inputs again.");
-         /*
+         string ErrorMsg = ("Oops, looks like something went wrong. Program will now end.");
+
          Console.WriteLine ("Enter Exams Weight: ");
          ExamsWeightString = Console.ReadLine();
          ExamsWeight = int.Parse(ExamsWeightString);
@@ -38,50 +38,9 @@ namespace hw1_alternate
          else  {
             Console.WriteLine (ErrorMsg);
             Console.WriteLine ("Grades add to " + sum + " not 100%");
-            return; // added return to stop program if true *STILL NEED TO FINALIZE*
-         }
-         */ // working part
-         string UserWeightPromt;
-         string UserWeightStringInputAndOutput;
-         class static string UserWeightPrompt ();
-         do {
-            Console.WriteLine ("Enter Exams Weight: ");
-            ExamsWeightString = Console.ReadLine ();
-            ExamsWeight = int.Parse (ExamsWeightString);
-
-            Console.WriteLine ("Enter Labs Weight: ");
-            LabsWeightString = Console.ReadLine ();
-            LabsWeight = int.Parse (LabsWeightString);
-
-            Console.WriteLine ("Enter Homework Weight: ");
-            HomeworkWeightString = Console.ReadLine ();
-            HomeworkWeight = int.Parse (HomeworkWeightString);
-
-            Console.WriteLine ("Enter Projects Weight: ");
-            ProjectWeightString = Console.ReadLine ();
-            ProjectWeight = int.Parse (ProjectWeightString);
-
-            Console.WriteLine ("Enter Participation Weight: ");
-            ParticipationWeightString = Console.ReadLine ();
-            ParticipationWeight = int.Parse (ParticipationWeightString);
-
-            int WeightSum = (ExamsWeight + LabsWeight + HomeworkWeight + ProjectWeight + ParticipationWeight);
-            return WeightSum;
-         } while (WeightSum != 100);
-
-         if (UserWeightPrompt == 100) {
-            Console.WriteLine ("Congratulations! Weights add to 100% ");
-         } else if (UserWeightPrompt != 100) {
-            Console.WriteLine ("Grades add to " + UserWeightPrompt + " not 100. Please try again.");
-         } else
             return;
-      }
+         }
 
-   }
-}
-      
-         //working part
-         /*
          Console.WriteLine ( "Enter Exams Grade: ");
          ExamsGradeString = Console.ReadLine();
          ExamsGrade = double.Parse(ExamsGradeString);
@@ -145,9 +104,10 @@ namespace hw1_alternate
             GradeLetter = ("so low that you are unlikely to pass ");
          }
          else{
+            Console.WriteLine("Looks Like your final grade is not within 0 to 100%");
             Console.WriteLine(ErrorMsg);
          }
          Console.WriteLine ("Your grade is " +  GradeLetter);
       }
   }
-}*/
+}
