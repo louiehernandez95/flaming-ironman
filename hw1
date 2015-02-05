@@ -2,7 +2,7 @@ using System;
 class MainClass
 { // still debugging 
    static void Main()
-   {  
+	{  
 
       int ExamsWeight, LabsWeight, HomeworkWeight, ProjectWeight, ParticipationWeight;
       double ExamsGrade, LabsGrade, HomeworkGrade, ProjectGrade, ParticipationGrade, GradeTotal;
@@ -46,21 +46,18 @@ class MainClass
 
             int WeightSum = (ExamsWeight + LabsWeight + HomeworkWeight + ProjectWeight + ParticipationWeight);
             return WeightSum;
-         } while (WeightSum != 100);
-
-         if (UserWeightPrompt == 100) {
+         } 
+		 while (WeightSum != 100);
+         
+		 if (UserWeightPrompt == 100) {
             Console.WriteLine ("Congratulations! Weights add to 100% ");
          } else if (UserWeightPrompt != 100) {
             Console.WriteLine ("Grades add to " + UserWeightPrompt + " not 100. Please try again.");
          } else
             return;
-      }
-
-
-
-      // container for user input prompts
-      // outputs final grade value so logic can assign letter grade
-      // should be final
+		// container for user input prompts
+		// outputs final grade value so logic can assign letter grade
+		// should be final
       UserGradeInputPrompt();
       {  
          // While loop prompts for and receives user inputs, conducts calculations, complete with nested user input checker
@@ -97,6 +94,10 @@ class MainClass
             UserGradeInputPrompt();
          }
       }
+	}
+
+
+
 
 
 
