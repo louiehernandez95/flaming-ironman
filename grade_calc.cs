@@ -1,7 +1,7 @@
 using System;
-namespace hw1_alternate
+namespace grade_calc
 {
-   class MainClass 
+   class MainClass
    {
       static void Main ()
       {
@@ -37,7 +37,7 @@ namespace hw1_alternate
 
          else  {
             Console.WriteLine ("Grades add to " + sum + " not 100% \n");
-            Console.WriteLine (ErrorMsg);          
+            Console.WriteLine (ErrorMsg);
             return;
          }
          double ExamsGrade, LabsGrade, HomeworkGrade, ProjectGrade, ParticipationGrade;
@@ -58,7 +58,7 @@ namespace hw1_alternate
          Console.WriteLine ( "Enter Participation Grade: ");
          ParticipationGradeString = Console.ReadLine();
          ParticipationGrade = double.Parse(ParticipationGradeString);
-                
+
          double grade = (ExamsWeight * ExamsGrade + HomeworkWeight * HomeworkGrade + LabsWeight * LabsGrade + ProjectWeight * ProjectGrade
             + ParticipationWeight * ParticipationGrade / 100.00);
 
@@ -66,37 +66,37 @@ namespace hw1_alternate
 
          if (grade <= 100) {
             GradeLetter = "an A+ ";
-         } 
+         }
          else if (grade >= 93) {
             GradeLetter = "an A ";
-         } 
+         }
          else if (grade >= 90) {
             GradeLetter = "an A- ";
-         } 
+         }
          else if (grade >= 87) {
             GradeLetter = ("a B+ ");
-         } 
+         }
          else if (grade >= 83) {
             GradeLetter = ("a B ");
-         } 
+         }
          else if (grade >= 80) {
             GradeLetter = ("a B- ");
-         } 
+         }
          else if (grade >= 77) {
             GradeLetter = ("a C+ ");
-         } 
+         }
          else if (grade >= 73) {
             GradeLetter = ("a C ");
-         } 
+         }
          else if (grade >= 70) {
             GradeLetter = ("a C- ");
-         } 
+         }
          else if (grade >= 67) {
             GradeLetter = ("a D+ ");
-         } 
+         }
          else if (grade >= 63) {
             GradeLetter = ("a D ");
-         } 
+         }
          else if (grade >= 60) {
             GradeLetter = ("a D- ");
          }
