@@ -59,12 +59,11 @@ namespace grade_calc
          ParticipationGradeString = Console.ReadLine();
          ParticipationGrade = double.Parse(ParticipationGradeString);
 
-         double grade = (ExamsWeight * ExamsGrade + HomeworkWeight * HomeworkGrade + LabsWeight * LabsGrade + ProjectWeight * ProjectGrade
-            + ParticipationWeight * ParticipationGrade / 100.00);
+            + ParticipationWeight * ParticipationGrade) / 100.00);
 
          string GradeLetter = "Undefined";
 
-         if (grade <= 100) {
+         if (grade == 100) {
             GradeLetter = "an A+ ";
          }
          else if (grade >= 93) {
