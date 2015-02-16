@@ -1,0 +1,10 @@
+C:\Users\rhern_000\Documents\Projects\work\Hmwk2\obj\x86\Debug\Hmwk2.csprojResolveAssemblyReference.cache
+C:\Users\rhern_000\Documents\Projects\work\Hmwk2\bin\Debug\Hmwk2.exe
+C:\Users\rhern_000\Documents\Projects\work\Hmwk2\bin\Debug\Hmwk2.pdb
+C:\Users\rhern_000\Documents\Projects\work\Hmwk2\obj\x86\Debug\Hmwk2.exe
+C:\Users\rhern_000\Documents\Projects\work\Hmwk2\obj\x86\Debug\Hmwk2.pdb
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\Hmwk2\bin\Debug\Hmwk2.exe
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\Hmwk2\bin\Debug\Hmwk2.pdb
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\Hmwk2\obj\x86\Debug\Hmwk2.csprojResolveAssemblyReference.cache
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\Hmwk2\obj\x86\Debug\Hmwk2.exe
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\Hmwk2\obj\x86\Debug\Hmwk2.pdb

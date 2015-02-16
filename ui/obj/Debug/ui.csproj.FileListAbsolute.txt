@@ -1,0 +1,22 @@
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\ui.dll
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\ui.pdb
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\mscorlib.dll
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\normidna.nlp
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\normnfc.nlp
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\normnfd.nlp
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\normnfkc.nlp
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\normnfkd.nlp
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\obj\Debug\ui.csprojResolveAssemblyReference.cache
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\obj\Debug\ui.dll
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\obj\Debug\ui.pdb
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\ui\bin\Debug\ui.dll
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\ui\bin\Debug\ui.pdb
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\ui\bin\Debug\mscorlib.dll
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\ui\bin\Debug\normidna.nlp
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\ui\bin\Debug\normnfc.nlp
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\ui\bin\Debug\normnfd.nlp
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\ui\bin\Debug\normnfkc.nlp
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\ui\bin\Debug\normnfkd.nlp
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\ui\obj\Debug\ui.csprojResolveAssemblyReference.cache
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\ui\obj\Debug\ui.dll
+C:\Users\rhern_000\Documents\GitHub\flaming-ironman\ui\obj\Debug\ui.pdb
