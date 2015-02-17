@@ -7,24 +7,28 @@ namespace gradecalc
    {
       public static void Main (string[] args)
       {
-        //int categoryNumber = UI.PromptInt("Please enter the number of grades in the category exam: ");
-
-        int examAverage = FindAverage ("Please enter the number of grades in the exam category: ");
+        // int categoryNumber = UI.PromptInt("Please enter the total number of categories: ");
+        int examAverage = FindAverage("exam");
+        int projectAverage = FindAverage("project");
+        int labAverage = FindAverage("lab");
+        int homeworkAverage = FindAverage("homework assignment");
+        int participationAverage = FindAverage ("participation point");
+        //* continute here
       }
 
-      public static int FindAverage(string userprompt)
-      {
-        Console.WriteLine(userprompt);
-        int numberOfGrades = int.Parse(Console.ReadLine());
 
+
+      public static int FindAverage(string gradePrompt)
+      {
+        int numberOfGrades = UI.PromptInt("Please enter the number of " + gradePrompt +  "@(s) to grade: ");
         int i = 1;
         int totalScore = 0;
-        do{
+         do{
           int score = UI.PromptInt("Please enter the grade of assignment " + i + ": ");
           i++;
           totalScore += score;
         } while (i < numberOfGrades);
-        return totalScore / numberofGrades;
+         return totalScore / numberOfGrades;
       }
 
       /*
