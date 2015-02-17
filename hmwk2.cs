@@ -1,23 +1,25 @@
-﻿using System;
-using IntroCS;
+using System;
 
-namespace gradecalc
+namespace IntroCS
 {
    class MainClass
    {
       public static void Main (string[] args)
       {
-        // int categoryNumber = UI.PromptInt("Please enter the total number of categories: ");
+        Console.WriteLine("This Calculator will help you determine a grade in a given class.");
+        getAverages();
+      }
+
+
+      public static void getAverages()
+      {
         int examAverage = FindAverage("exam");
         int projectAverage = FindAverage("project");
         int labAverage = FindAverage("lab");
         int homeworkAverage = FindAverage("homework assignment");
         int participationAverage = FindAverage ("participation point");
-        //* continute here
+
       }
-
-
-
       public static int FindAverage(string gradePrompt)
       {
         int numberOfGrades = UI.PromptInt("Please enter the number of " + gradePrompt +  "(s) to grade: ");
