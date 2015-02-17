@@ -20,14 +20,14 @@ namespace gradecalc
 
       public static int FindAverage(string gradePrompt)
       {
-        int numberOfGrades = UI.PromptInt("Please enter the number of " + gradePrompt +  "@(s) to grade: ");
+        int numberOfGrades = UI.PromptInt("Please enter the number of " + gradePrompt +  "(s) to grade: ");
         int i = 1;
         int totalScore = 0;
          do{
           int score = UI.PromptInt("Please enter the grade of assignment " + i + ": ");
           i++;
           totalScore += score;
-        } while (i < numberOfGrades);
+        } while (i <= numberOfGrades);
          return totalScore / numberOfGrades;
       }
 
