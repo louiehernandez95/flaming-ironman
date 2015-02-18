@@ -49,13 +49,13 @@ namespace IntroCS
     {
       double numberOfGrades = UI.PromptDouble("Please enter the number of " + gradePrompt +  "(s) to grade: ");
       double i = 1;
-      double totalScore = 0;
+      double averageScore = 0;
        do{
         double score = UI.PromptDouble("Please enter the grade of assignment " + i + ": ");
         i++;
         totalScore += score;
       } while (i <= numberOfGrades);
-       return totalScore / numberOfGrades;
+       return averageScore / numberOfGrades;
     }
 
 		//added this function to assign grades CAM
