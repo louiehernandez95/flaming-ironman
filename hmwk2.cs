@@ -6,15 +6,11 @@ namespace IntroCS
   {
     public static void Main (string[] args)
     {
-      double examWeight, labWeight, homeworkWeight, projectWeight,
-       participationWeight;
-      double examAverage, labGrade, homeworkGrade, projectGrade,
-       participationGrade;
       Console.WriteLine("This Calculator will help you determine a grade in a "+
       "given class.\n");
       getWeights();
       getAverages();
-      GradeAssignments();
+      GradeAssignments(double finalGrade);
     }
 
     //prompts user for weights, tests if adds to 100, loops back if test fails
@@ -66,7 +62,8 @@ namespace IntroCS
       double i = 1;
       double totalScore = 0;
        do{
-        double score = UI.PromptDouble("Please enter the grade of assignment " + i + ": ");
+        double score = UI.PromptDouble("Please enter the grade of assignment "
+         + i + ": ");
         i++;
         totalScore += score;
       } while (i <= numberOfGrades);
@@ -74,16 +71,19 @@ namespace IntroCS
     }
 
     //computes final overall grade
-    public static double GiveFinalGrade()
+    public static double GiveFinalGrade(double examAverage, double examWeight,
+     double projectAverage, double projectWeight, double labAverage,
+     double labWeight, double homeworkAverage, double homeworkWeight,
+     double participationAverage, double participationWeight)
     {
-      double finalGrade = (examAverage * examWeight + projectAverage * projectWeight + labAverage *
-      labWeight + homeworkAverage * homeworkWeight + participationAverage *
-      participationWeight)/100;
+      double finalGrade = (examAverage * examWeight + projectAverage *
+       projectWeight + labAverage * labWeight + homeworkAverage * homeworkWeight
+       + participationAverage * participationWeight)/100;
       return finalGrade;
     }
 
     //calcs and assigns grade
-    public static void GradeAssignments()
+    public static string GradeLetter(string grade)
     {
       string LetterGradeMsg, GradeLetter;
       if (grade == 100){
