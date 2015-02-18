@@ -6,6 +6,10 @@ namespace IntroCS
   {
     public static void Main (string[] args)
     {
+      double examWeight, labWeight, homeworkWeight, projectWeight,
+       participationWeight;
+      double examAverage, labGrade, homeworkGrade, projectGrade,
+       participationGrade;
       Console.WriteLine("This Calculator will help you determine a grade in a "+
       "given class.\n");
       getWeights();
@@ -68,15 +72,20 @@ namespace IntroCS
       } while (i <= numberOfGrades);
        return totalScore / numberOfGrades;
     }
-		int ExamsWeight, LabsWeight, HomeworkWeight, ProjectWeight, ParticipationWeight;
-		double ExamsGrade, LabsGrade, HomeworkGrade, ProjectGrade, ParticipationGrade;
+
+    //computes final overall grade
+    public static double GiveFinalGrade()
+    {
+      double finalGrade = (examAverage * examWeight + projectAverage * projectWeight + labAverage *
+      labWeight + homeworkAverage * homeworkWeight + participationAverage *
+      participationWeight)/100;
+      return finalGrade;
+    }
+
     //calcs and assigns grade
-    static void GradeAssignments()
+    public static void GradeAssignments()
     {
       string LetterGradeMsg, GradeLetter;
-      double grade = ((ExamsWeight * ExamsGrade + HomeworkWeight * HomeworkGrade
-       + LabsWeight * LabsGrade + ProjectWeight * ProjectGrade +
-       ParticipationWeight * ParticipationGrade) / 100.00);
       if (grade == 100){
       GradeLetter = ", an A+ ";
       }
