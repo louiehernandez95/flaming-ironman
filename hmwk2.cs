@@ -57,5 +57,54 @@ namespace IntroCS
         } while (i <= numberOfGrades);
          return totalScore / numberOfGrades;
       }
-   }
+
+		//added this function to assign grades CAM
+		static void Grade Assignments()
+		{
+		string LetterGradeMsg, GradeLetter;
+		if (grade == 100){
+			GradeLetter = ", an A+ ";
+		}
+		else if (grade >= 93) {
+			GradeLetter = ", an A ";
+		}
+		else if (grade >= 90) {
+			GradeLetter = ", an A- ";
+		}
+		else if (grade >= 87) {
+			GradeLetter = ", a B+ ";
+		}
+		else if (grade >= 83) {
+			GradeLetter = ", a B ";
+		}
+		else if (grade >= 80) {
+			GradeLetter = ", a B- ";
+		}
+		else if (grade >= 77) {
+			GradeLetter = ", a C+ ";
+		}
+		else if (grade >= 73) {
+			GradeLetter = ", a C ";
+		}
+		else if (grade >= 70) {
+			GradeLetter = ", a C- ";
+		}
+		else if (grade >= 67) {
+			GradeLetter = ", a D+ ";
+		}
+		else if (grade >= 63) {
+			GradeLetter = ", a D ";
+		}
+		else if (grade >= 60) {
+			GradeLetter = ", a D- ";
+		}
+		else {
+			GradeLetter = ". It is so low that you are unlikely to pass ";
+		}
+		LetterGradeMsg = GradeLetter;
+		Console.WriteLine("Your grade is " + grade  + LetterGradeMsg);
+	
+		}
+	}
+	}
 }
