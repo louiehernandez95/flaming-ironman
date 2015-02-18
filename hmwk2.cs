@@ -44,7 +44,7 @@ namespace IntroCS
         double homeworkAverage = FindAverage("homework assignment");
         double participationAverage = FindAverage ("participation point");
       }
-      //prompts for individual grades and computes average score for the category that is passed in
+      //prompts for individual grades and computes average score for each category that is passed in
       public static double FindAverage(string gradePrompt)
       {
         double numberOfGrades = UI.PromptDouble("Please enter the number of " + gradePrompt +  "(s) to grade: ");
