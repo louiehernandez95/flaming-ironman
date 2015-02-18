@@ -62,7 +62,10 @@ namespace IntroCS
 		static void Grade Assignments()
 		{
 		string LetterGradeMsg, GradeLetter;
-		if (grade == 100){
+		double grade = ((ExamsWeight * ExamsGrade + HomeworkWeight * HomeworkGrade + LabsWeight * LabsGrade + ProjectWeight * ProjectGrade
+				+ ParticipationWeight * ParticipationGrade) / 100.00);
+		
+			if (grade == 100){
 			GradeLetter = ", an A+ ";
 		}
 		else if (grade >= 93) {
@@ -102,7 +105,7 @@ namespace IntroCS
 			GradeLetter = ". It is so low that you are unlikely to pass ";
 		}
 		LetterGradeMsg = GradeLetter;
-		Console.WriteLine("Your grade is " + grade  + LetterGradeMsg);
+			Console.WriteLine("Your grade is " + {0:F2}  + LetterGradeMsg, Grade);
 	
 		}
 	}
