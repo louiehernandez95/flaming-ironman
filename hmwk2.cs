@@ -14,18 +14,20 @@ namespace IntroCS
       public static void getWeights()
       {
         Console.WriteLine("Begin by entering individual category weights, they must add to 100%\n");
-        double examWeight = FindWeight("exam");
-        double projectWeight = FindWeight("project");
-        double labWeight = FindWeight("lab");
-        double homeworkWeight = FindWeight("homework");
-        double participationWeight = FindWeight("participation point");
-        double weightSum = (examWeight + projectWeight + labWeight + homeworkWeight + participationWeight);
-
-        if (weightSum == 100) {
-           Console.WriteLine ("Congratulations! Weights add to 100%\n");
-        } else {Console.WriteLine("Sorry weights did not add to 100%, please try again.\n");
-            return;
-          }
+        double weightSum = 0;
+        do{
+          double examWeight = FindWeight("exam");
+          double projectWeight = FindWeight("project");
+          double labWeight = FindWeight("lab");
+          double homeworkWeight = FindWeight("homework");
+          double participationWeight = FindWeight("participation point");
+          weightSum = (examWeight + projectWeight + labWeight + homeworkWeight + participationWeight);
+          if (weightSum == 100) {
+            Console.WriteLine ("Congratulations! Weights add to 100%\n");
+          } else{
+              Console.WriteLine("Sorry weights did not add to 100%, please try again.\n");
+            }
+        }while(weightSum != 100);
       }
       public static double FindWeight(string weightPrompt)
       {
