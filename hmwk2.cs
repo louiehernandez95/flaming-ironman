@@ -68,7 +68,8 @@ namespace IntroCS
       } while (i <= numberOfGrades);
        return totalScore / numberOfGrades;
     }
-
+		int ExamsWeight, LabsWeight, HomeworkWeight, ProjectWeight, ParticipationWeight;
+		double ExamsGrade, LabsGrade, HomeworkGrade, ProjectGrade, ParticipationGrade;
     //calcs and assigns grade
     static void GradeAssignments()
     {
@@ -116,7 +117,8 @@ namespace IntroCS
         GradeLetter = ". It is so low that you are unlikely to pass ";
       }
       LetterGradeMsg = GradeLetter;
-        Console.WriteLine("Your grade is " + {0:F1} + LetterGradeMsg, grade);
+			grade = Math.Round(grade, 2);
+			Console.WriteLine("Your grade is " + grade + LetterGradeMsg);
     }
   }
 }
