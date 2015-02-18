@@ -10,7 +10,7 @@ namespace IntroCS
         getWeights();
         getAverages();
       }
-
+      //prompts user for weights, tests if adds to 100, loops back if test fails
       public static void getWeights()
       {
         Console.WriteLine("Begin by entering individual category weights, they must add to 100%\n");
@@ -29,11 +29,13 @@ namespace IntroCS
             }
         }while(weightSum != 100);
       }
+      //prompts user for weights of each category
       public static double FindWeight(string weightPrompt)
       {
         double weight = UI.PromptDouble("Please enter the weight of " + weightPrompt + "(s): ");
         return weight;
       }
+      //gets and assigns average grades of each category
       public static void getAverages()
       {
         double examAverage = FindAverage("exam");
@@ -41,8 +43,8 @@ namespace IntroCS
         double labAverage = FindAverage("lab");
         double homeworkAverage = FindAverage("homework assignment");
         double participationAverage = FindAverage ("participation point");
-
       }
+      //prompts for individual grades and computes average score for the category that is passed in
       public static double FindAverage(string gradePrompt)
       {
         double numberOfGrades = UI.PromptDouble("Please enter the number of " + gradePrompt +  "(s) to grade: ");
