@@ -16,8 +16,7 @@ namespace IntroCS
     //prompts user for weights, tests if adds to 100, loops back if test fails
     public static void getWeights()
     {
-      Console.WriteLine("Begin by entering individual category weights, they " +
-       "must add to 100%\n");
+      Console.WriteLine("Begin by entering individual category weights, they " + "must add to 100%\n");
       double weightSum = 0;
       do{
         double examWeight = FindWeight("exam");
@@ -25,13 +24,11 @@ namespace IntroCS
         double labWeight = FindWeight("lab");
         double homeworkWeight = FindWeight("homework");
         double participationWeight = FindWeight("participation point");
-        weightSum = (examWeight + projectWeight + labWeight + homeworkWeight +
-         participationWeight);
+        weightSum = (examWeight + projectWeight + labWeight + homeworkWeight + participationWeight);
         if (weightSum == 100) {
           Console.WriteLine ("Congratulations! Weights add to 100%\n");
         } else{
-            Console.WriteLine("Sorry weights did not add to 100%, please try " +
-             "again.\n");
+            Console.WriteLine("Sorry weights did not add to 100%, please try " + "again.\n");
           }
       }while(weightSum != 100);
     }
@@ -39,8 +36,7 @@ namespace IntroCS
     //prompts user for weights of each category
     public static double FindWeight(string weightPrompt)
     {
-      double weight = UI.PromptDouble("Please enter the weight of " +
-       weightPrompt + "(s): ");
+      double weight = UI.PromptDouble("Please enter the weight of " + weightPrompt + "(s): ");
       return weight;
     }
 
@@ -57,13 +53,11 @@ namespace IntroCS
     //prompts for grade and averages the scores for passed in categories
     public static double FindAverage(string gradePrompt)
     {
-      double numberOfGrades = UI.PromptDouble("Please enter the number of " +
-       gradePrompt +  "(s) to grade: ");
+      double numberOfGrades = UI.PromptDouble("Please enter the number of " + gradePrompt +  "(s) to grade: ");
       double i = 1;
       double totalScore = 0;
        do{
-        double score = UI.PromptDouble("Please enter the grade of assignment "
-         + i + ": ");
+        double score = UI.PromptDouble("Please enter the grade of assignment " + i + ": ");
         i++;
         totalScore += score;
       } while (i <= numberOfGrades);
@@ -73,9 +67,7 @@ namespace IntroCS
     //computes final overall grade
     public static double GiveFinalGrade(double examAverage, double examWeight, double projectAverage, double projectWeight, double labAverage, double labWeight, double homeworkAverage, double homeworkWeight, double participationAverage, double participationWeight)
     {
-      double finalGrade = (examAverage * examWeight + projectAverage *
-       projectWeight + labAverage * labWeight + homeworkAverage * homeworkWeight
-       + participationAverage * participationWeight)/100;
+      double finalGrade = (examAverage * examWeight + projectAverage * projectWeight + labAverage * labWeight + homeworkAverage * homeworkWeight + participationAverage * participationWeight)/100;
       return finalGrade;
     }
 
