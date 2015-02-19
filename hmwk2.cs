@@ -115,7 +115,7 @@ namespace IntroCS
         GradeLetter = ". It is so low that you are unlikely to pass ";
       }
       LetterGradeMsg = GradeLetter;
-			grade = Math.Round(grade, 2);
+			grade = Math.Round(grade, 2);	//CAM couldn't get the technique from the book to work, found this other technique
 			Console.WriteLine("Your grade is " + grade + LetterGradeMsg);
     }
   }
