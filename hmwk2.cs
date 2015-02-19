@@ -7,9 +7,9 @@ namespace IntroCS
     public static void Main (string[] args)
     {
       Console.WriteLine("This Calculator will help you determine a grade in a " + "given class.\n");
-      getWeights();
-      getAverages();
-      GiveFinalGrade();
+      double[] arrayOfWeights = getWeights();
+      double[] arrayOfAverages = getAverages();
+      GiveFinalGrade(arrayOfAverages, arrayOfWeights);
       //string GradeLetter = GradeAssignment(finalGrade);
     }
 
@@ -70,20 +70,19 @@ namespace IntroCS
     }
 
     //computes final overall grade
-    public static double GiveFinalGrade()
+      public static double GiveFinalGrade(double[] x, double[] y)
     {
-      double[] multipliedVariable = new double[5];
-      for (int = 0; int <= 4; i++)
+      double[] multipliedVariables = new double[5];
+      double finalGrade;
+      for (int i = 0; i < 4; i++)
       {
-        multipliedVariables[i] = weightValue [i] * averageValue [i];
+            multipliedVariables[i] = x[i] * y[i];
       }
-      foreach(double finalGrade in multipliedVariables){
-        finalGrade += multipliedVariable
-      }
-      finalGrade = finalGrade/100;
+      finalGrade = multipliedVariables[0] + multipliedVariables[1] + multipliedVariables[2] + multipliedVariables[3] + multipliedVariables[4];
       return finalGrade;
     }
 
+    /*
     //calcs and assigns grade
     public static string GradeAssignment(double grade)
     {
@@ -130,11 +129,10 @@ namespace IntroCS
       return GradeLetter;
 
 
-      /*
       LetterGradeMsg = GradeLetter;
 			grade = Math.Round(grade, 2);
 			Console.WriteLine("Your grade is " + grade + LetterGradeMsg);
-      */
     }
+    */
   }
 }
