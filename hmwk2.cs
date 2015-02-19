@@ -9,7 +9,7 @@ namespace IntroCS
       Console.WriteLine("This Calculator will help you determine a grade in a " + "given class.\n");
       getWeights();
       getAverages();
-      //GiveFinalGrade(double examAverage, double examWeight, double projectAverage, double projectWeight, double labAverage, double labWeight, double, homeworkAverage, double homeworkWeight, double participationAverage, double participationWeight);
+      GiveFinalGrade();
       //string GradeLetter = GradeAssignment(finalGrade);
     }
 
@@ -70,9 +70,17 @@ namespace IntroCS
     }
 
     //computes final overall grade
-    public static double GiveFinalGrade(double examAverage, double examWeight, double projectAverage, double projectWeight, double labAverage, double labWeight, double homeworkAverage, double homeworkWeight, double participationAverage, double participationWeight)
+    public static double GiveFinalGrade()
     {
-      double finalGrade = (examAverage * examWeight + projectAverage * projectWeight + labAverage * labWeight + homeworkAverage * homeworkWeight + participationAverage * participationWeight)/100;
+      double[] multipliedVariable = new double[5];
+      for (int = 0; int <= 4; i++)
+      {
+        multipliedVariables[i] = weightValue [i] * averageValue [i];
+      }
+      foreach(double finalGrade in multipliedVariables){
+        finalGrade += multipliedVariable
+      }
+      finalGrade = finalGrade/100;
       return finalGrade;
     }
 
