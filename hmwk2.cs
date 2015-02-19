@@ -9,7 +9,7 @@ namespace IntroCS
       Console.WriteLine("This Calculator will help you determine a grade in a " + "given class.\n");
       getWeights();
       getAverages();
-      double finalGrade = GiveFinalGrade();
+      double finalGrade = GiveFinalGrade(double examAverage, double examWeight, double projectAverage, double projectWeight, double labAverage, double labWeight, double homeworkAverage, double homeworkWeight, double participationAverage, double participationWeight);
       GradeAssignments(double finalGrade);
     }
 
@@ -72,7 +72,7 @@ namespace IntroCS
     }
 
     //calcs and assigns grade
-    public static string GradeLetter(string grade)
+    public static string GradeAssignments(double grade)
     {
       string LetterGradeMsg, GradeLetter;
       if (grade == 100){
