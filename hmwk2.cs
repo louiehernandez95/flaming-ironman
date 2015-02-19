@@ -72,10 +72,7 @@ namespace IntroCS
     }
 
     //computes final overall grade
-    public static double GiveFinalGrade(double examAverage, double examWeight,
-     double projectAverage, double projectWeight, double labAverage,
-     double labWeight, double homeworkAverage, double homeworkWeight,
-     double participationAverage, double participationWeight)
+    public static double GiveFinalGrade(double examAverage, double examWeight, double projectAverage, double projectWeight, double labAverage, double labWeight, double homeworkAverage, double homeworkWeight, double participationAverage, double participationWeight)
     {
       double finalGrade = (examAverage * examWeight + projectAverage *
        projectWeight + labAverage * labWeight + homeworkAverage * homeworkWeight
