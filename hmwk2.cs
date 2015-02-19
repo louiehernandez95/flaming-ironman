@@ -10,6 +10,7 @@ namespace IntroCS
       "given class.\n");
       getWeights();
       getAverages();
+      double finalGrade = GiveFinalGrade();
       GradeAssignments(double finalGrade);
     }
 
