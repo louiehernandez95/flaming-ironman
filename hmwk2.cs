@@ -7,11 +7,17 @@ namespace IntroCS
     public static void Main (string[] args)
     {
       Console.WriteLine("This Calculator will help you determine a grade in a " + "given class.\n");
-      double[] arrayOfWeights = getWeights();
-      double[] arrayOfAverages = getAverages();
-      GiveFinalGrade(arrayOfAverages, arrayOfWeights);
-      //string GradeLetter = GradeAssignment(finalGrade);
+      double finalGradeRaw = GiveFinalGrade(getWeights(), getAverages());
+      FinalMessage(GradeAssignment(finalGradeRaw), finalGradeRaw);
     }
+
+
+    public static void FinalMessage(string LetterGrade, double n)
+    {
+      Console.WriteLine("Your grade is {0:F2} " + LetterGrade, n);
+    }
+
+
 
     //prompts user for weights, tests if adds to 100, loops back if test fails
     public static double[] getWeights()
@@ -62,7 +68,7 @@ namespace IntroCS
       double i = 1;
       double totalScore = 0;
        do{
-        double score = UI.PromptDouble("Please enter the grade of assignment " + i + ": ");
+        double score = UI.PromptDouble("Please enter the grade of the assignment " + i + ": ");
         i++;
         totalScore += score;
       } while (i <= numberOfGrades);
@@ -78,61 +84,52 @@ namespace IntroCS
       {
             multipliedVariables[i] = x[i] * y[i];
       }
-      finalGrade = multipliedVariables[0] + multipliedVariables[1] + multipliedVariables[2] + multipliedVariables[3] + multipliedVariables[4];
+      finalGrade = (multipliedVariables[0] + multipliedVariables[1] + multipliedVariables[2] + multipliedVariables[3] + multipliedVariables[4])/100;
       return finalGrade;
     }
 
-    /*
     //calcs and assigns grade
     public static string GradeAssignment(double grade)
     {
-      string LetterGradeMsg, GradeLetter;
       if (grade == 100){
-      GradeLetter = ", an A+ ";
+        return ", an A+ ";
       }
       else if (grade >= 93) {
-        GradeLetter = ", an A ";
+        return ", an A ";
       }
       else if (grade >= 90) {
-        GradeLetter = ", an A- ";
+        return ", an A- ";
       }
       else if (grade >= 87) {
-        GradeLetter = ", a B+ ";
+        return ", a B+ ";
       }
       else if (grade >= 83) {
-        GradeLetter = ", a B ";
+        return ", a B ";
       }
       else if (grade >= 80) {
-        GradeLetter = ", a B- ";
+        return ", a B- ";
       }
       else if (grade >= 77) {
-        GradeLetter = ", a C+ ";
+        return ", a C+ ";
       }
       else if (grade >= 73) {
-        GradeLetter = ", a C ";
+        return ", a C ";
       }
       else if (grade >= 70) {
-        GradeLetter = ", a C- ";
+        return ", a C- ";
       }
       else if (grade >= 67) {
-        GradeLetter = ", a D+ ";
+        return ", a D+ ";
       }
       else if (grade >= 63) {
-        GradeLetter = ", a D ";
+        return ", a D ";
       }
       else if (grade >= 60) {
-        GradeLetter = ", a D- ";
+        return ", a D- ";
       }
       else {
-        GradeLetter = ". It is so low that you are unlikely to pass ";
+        return ". It is so low that you are unlikely to pass ";
       }
-      return GradeLetter;
-
-
-      LetterGradeMsg = GradeLetter;
-			grade = Math.Round(grade, 2);
-			Console.WriteLine("Your grade is " + grade + LetterGradeMsg);
     }
-    */
   }
 }
