@@ -10,7 +10,7 @@ namespace IntroCS
       getWeights();
       getAverages();
       double finalGrade = GiveFinalGrade(double examAverage, double examWeight, double projectAverage, double projectWeight, double labAverage, double labWeight, double homeworkAverage, double homeworkWeight, double participationAverage, double participationWeight);
-      GradeAssignment(double finalGrade);
+      string GradeLetter = GradeAssignment(finalGrade);
     }
 
     //prompts user for weights, tests if adds to 100, loops back if test fails
@@ -114,6 +114,7 @@ namespace IntroCS
       else {
         GradeLetter = ". It is so low that you are unlikely to pass ";
       }
+      return GradeLetter;
       /*
       LetterGradeMsg = GradeLetter;
 			grade = Math.Round(grade, 2);	//CAM couldn't get the technique from the book to work, found this other technique
