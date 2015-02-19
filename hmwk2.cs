@@ -6,8 +6,7 @@ namespace IntroCS
   {
     public static void Main (string[] args)
     {
-      Console.WriteLine("This Calculator will help you determine a grade in a "+
-      "given class.\n");
+      Console.WriteLine("This Calculator will help you determine a grade in a " + "given class.\n");
       getWeights();
       getAverages();
       double finalGrade = GiveFinalGrade();
