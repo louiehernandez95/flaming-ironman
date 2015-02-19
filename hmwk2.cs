@@ -10,7 +10,7 @@ namespace IntroCS
       getWeights();
       getAverages();
       double finalGrade = GiveFinalGrade(double examAverage, double examWeight, double projectAverage, double projectWeight, double labAverage, double labWeight, double homeworkAverage, double homeworkWeight, double participationAverage, double participationWeight);
-      GradeAssignments(double finalGrade);
+      GradeAssignment(double finalGrade);
     }
 
     //prompts user for weights, tests if adds to 100, loops back if test fails
@@ -72,7 +72,7 @@ namespace IntroCS
     }
 
     //calcs and assigns grade
-    public static string GradeAssignments(double grade)
+    public static string GradeAssignment(double grade)
     {
       string LetterGradeMsg, GradeLetter;
       if (grade == 100){
@@ -114,9 +114,11 @@ namespace IntroCS
       else {
         GradeLetter = ". It is so low that you are unlikely to pass ";
       }
+      /*
       LetterGradeMsg = GradeLetter;
 			grade = Math.Round(grade, 2);	//CAM couldn't get the technique from the book to work, found this other technique
 			Console.WriteLine("Your grade is " + grade + LetterGradeMsg);
+      */
     }
   }
 }
