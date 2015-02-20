@@ -1,0 +1,11 @@
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\ui.dll
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\ui.pdb
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\mscorlib.dll
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\normidna.nlp
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\normnfc.nlp
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\normnfd.nlp
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\normnfkc.nlp
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\bin\Debug\normnfkd.nlp
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\obj\Debug\ui.csprojResolveAssemblyReference.cache
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\obj\Debug\ui.dll
+E:\School\CURRENT CLASSES\Comp170\Resources\examples\ui\obj\Debug\ui.pdb
