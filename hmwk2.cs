@@ -67,16 +67,18 @@ namespace IntroCS
     public static double FindAverage(string gradePrompt)
     {
       double numberOfGrades = UI.PromptDouble("Please enter the number of " +
-       gradePrompt +  "(s) to grade: ");
+       gradePrompt +  "(s): ");
       double i = 1;
       double totalScore = 0;
        do{
         double score = UI.PromptDouble("Please enter the grade of the " +
-         "assignment" + i + ": ");
+         "assignment " + i + " : ");
         i++;
         totalScore += score;
       } while (i <= numberOfGrades);
-       return totalScore / numberOfGrades;
+      double averageScore = totalScore / numberOfGrades;
+      Console.WriteLine("Calculated Average Exam Grade: " + averageScore);
+      return averageScore;
     }
 
     //computes final overall grade
