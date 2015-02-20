@@ -8,7 +8,7 @@ namespace IntroCS
     {
       Console.WriteLine("This Calculator will help you determine a grade in a "
        + "given class.\n");
-      double finalGradeRaw = GiveFinalGrade(getWeights(), getAverages());
+      double finalGradeRaw = GiveFinalGrade(GetWeights(), GetAverages());
       FinalMessage(GradeAssignment(finalGradeRaw), finalGradeRaw);
     }
 
@@ -19,7 +19,7 @@ namespace IntroCS
     }
 
     //prompts user for weights, tests if adds to 100, loops back if test fails
-    public static double[] getWeights()
+    public static double[] GetWeights()
     {
       Console.WriteLine("Begin by entering individual category weights, they " +
        "must add to 100%\n");
@@ -52,7 +52,7 @@ namespace IntroCS
     }
 
     //gets and assigns average grades of each category
-    public static double[] getAverages()
+    public static double[] GetAverages()
     {
       double[] averageValue = new double [5];
       averageValue[0] = FindAverage("exam");
