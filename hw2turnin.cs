@@ -37,10 +37,10 @@ namespace IntroCS
 					Console.WriteLine ("Congratulations! Weights add to 100%\n");
 				} else{
 					Console.WriteLine("Sorry weights did not add to 100%, please try " +
-						"again.\n"); // do we need to concatenate? is this to make it all pretty and uniform? CAM
+						"again.\n");
 				}
 			}while(weightSum != 100);
-			return weightValue;	
+			return weightValue;
 		}
 
 		//prompts user for weights of each category
@@ -60,15 +60,18 @@ namespace IntroCS
 			averageValue[2] = FindAverage("lab");
 			averageValue[3] = FindAverage("homework assignment");
 			averageValue[4] = FindAverage ("participation point");
-			return averageValue;		//should this be return or console.writeline? we want to display the avg in each category CAM
+			return averageValue;
 		}
 
 		//prompts for grade and averages the scores for passed in categories
 		public static double FindAverage(string gradePrompt)
 		{
 			double numberOfGrades = UI.PromptDouble("Please enter the number of " +
-				gradePrompt +  "(s) to grade: "); //do we need to add the "to grade" at the end? i think it looks cleaner w/o CAM
-			double i = 1; // what happens when user inputs 0 grades in Labs for example? 
+				gradePrompt +  "(s) to grade: ");
+			if (numberofGrades <= 0){
+				return;
+				}
+			double i = 1; // what happens when user inputs 0 grades in Labs for example?
 			double totalScore = 0;
 			do{
 				double score = UI.PromptDouble("Please enter the grade of the " +
@@ -76,7 +79,7 @@ namespace IntroCS
 				i++;
 				totalScore += score;
 			} while (i <= numberOfGrades);
-			return totalScore / numberOfGrades; //again, do we need return or console.writeline CAM
+			return totalScore / numberOfGrades;
 		}
 
 		//computes final overall grade
