@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="grade_file4\grade_file4.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="grade_file4\Program.cs">
+    <Files>
+      <File FileName="grade_file4\Program.cs" Line="28" Column="28" />
+      <File FileName="grade_file4\EmptyClass.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
